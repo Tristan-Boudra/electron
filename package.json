@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/Tristan-Boudra/electron#readme",
   "devDependencies": {
-    "electron": "^25.1.0"
+    "autoprefixer": "^10.4.14",
+    "electron": "^25.1.0",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2"
   }
 }
