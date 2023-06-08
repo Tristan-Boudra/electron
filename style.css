@@ -24,6 +24,28 @@
     align-items: center;
 }
 
+.form_list{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+    align-items: center;
+
+}
+
+.form_list ul{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style: none;
+}
+
 .form input{
     padding: 10px;
     border: 1px solid #ddd;
@@ -141,4 +163,8 @@ padding: 15% 0 0;
 @keyframes third {
     from {transform: rotate(0deg);}
     to {transform: rotate(111deg);}
+}
+
+footer{
+    text-align: center;
 }
