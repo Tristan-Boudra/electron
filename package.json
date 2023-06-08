@@ -1,0 +1,23 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . -v --log-level=3",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tristan-Boudra/electron.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tristan-Boudra/electron/issues"
+  },
+  "homepage": "https://github.com/Tristan-Boudra/electron#readme",
+  "devDependencies": {
+    "electron": "^25.1.0"
+  }
+}
