@@ -1,8 +1,5 @@
 const { app, BrowserWindow } = require('electron')
 
-app.commandLine.appendSwitch('ignore-certificate-errors');
-app.commandLine.appendSwitch('allow-insecure-localhost');
-
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
@@ -14,5 +11,7 @@ const createWindow = () => {
 
 app.whenReady().then(() => {
   createWindow()
+  app.on('activate', () => {
+    if (BrowserWindow.getAllWindows().length === 0) createWindow()
+  })
 })
-
