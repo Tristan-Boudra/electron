@@ -6,10 +6,9 @@
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"/>
     <title>My app Electron</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./renderer.js"></script>
     <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> -->
-  </head>
-  <body>
+</head>
+<body>
     <div class="">
         <h1 class="text-header">Welcome to ElecForm 👋</h1>
     </div>
@@ -19,9 +18,9 @@
             <input type="text" name="name" id="name" placeholder="Name">
             <input type="text" name="surname" id="surname" placeholder="Surname">
             <input type="text" name="email" id="email" placeholder="Email">
-            <input type="submit" value="Add" class="btn_add">
-            <input type="submit" value="Modify" class="btn_modify">
-            <input type="submit" value="Delete" class="btn_delete">
+            <button type="submit" value="Add" id="btn_add">Add</button>
+            <input type="submit" value="Modify" id="btn_modify">
+            <input type="submit" value="Delete" id="btn_delete">
         </form>
     </section>
     <section id="list">
@@ -33,14 +32,14 @@
                 <li class=""><button class="btn_li_modify">Modify</button></li>
                 <li class=""><button class="btn_li_delete">Delete</button></li>
             </ul>
-            <input type="submit" value="Soumettre">
+            <input type="submit" value="Soumettre" id="addButton">
         </form>
     </section>
     <section id="donut">
         <div class="container">
             <h2 class="text-header">Donut Chart</h2>
             <div class="donut-chart-block block"> 
-                  <div class="donut-chart">
+                <div class="donut-chart">
                     <div id="part1" class="portion-block"><div class="circle"></div></div>
                     <div id="part2" class="portion-block"><div class="circle"></div></div>
                     <div id="part3" class="portion-block"><div class="circle"></div></div>
@@ -54,5 +53,6 @@
             <p>Develop with ❤️ by Boudra Tristan</p>
         </footer>
     </section>
-  </body>
+    <script src="renderer.js"></script>
+</body>
 </html>
