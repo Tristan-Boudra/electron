@@ -1,20 +1,28 @@
+async function api() {
+    const res = await fetch("http://127.0.0.1:3000/recette");
+    const data = await res.json();
+}
+
+api();
+
 const form = document.querySelector('.form');
 const nameInput = document.querySelector('#name');
-const surnameInput = document.querySelector('#surname');
-const emailInput = document.querySelector('#email');
+const surnameInput = document.querySelector('#flavor');
+const emailInput = document.querySelector('#price');
 const addButton = document.querySelector('#btn_add');
 const modifyButton = document.querySelector('#btn_modify');
 const deleteButton = document.querySelector('#btn_delete');
-const list = document.querySelector('#list');
+const list = document.querySelector('#myList');
 
 let selectedListItem = null;
 
 const addItemToList = (name, surname, email) => {
     const listItem = document.createElement('li');
-    listItem.textContent = `Name: ${name}, Surname: ${surname}, Email: ${email}`;
+    listItem.textContent = `Name: ${name}, Flavor: ${surname}, Price: ${email}`;
 
     const modifyButton = document.createElement('button');
     modifyButton.textContent = 'Modify';
+    // modifyButton.addclassName = 'btn_modify';
     modifyButton.addEventListener('click', () => {
         modifyItem(listItem);
     });

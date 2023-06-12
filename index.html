@@ -2,57 +2,61 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"/>
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"/>
+</head>
     <title>My app Electron</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> -->
 </head>
 <body>
-    <div class="">
-        <h1 class="text-header">Welcome to ElecForm 👋</h1>
-    </div>
-    <section id="form">
-        <h2 class="text-header">Form</h2>
-        <form action="" class="form">
-            <input type="text" name="name" id="name" placeholder="Name">
-            <input type="text" name="surname" id="surname" placeholder="Surname">
-            <input type="text" name="email" id="email" placeholder="Email">
-            <button type="submit" value="Add" id="btn_add">Add</button>
-            <input type="submit" value="Modify" id="btn_modify">
-            <input type="submit" value="Delete" id="btn_delete">
-        </form>
-    </section>
-    <section id="list">
-        <form action="" class="form_list">
-            <ul id="myList">
-                <li class="nameList"></li>
-                <li class="surnameList"></li>
-                <li class="emailList"></li>
-                <li class=""><button class="btn_li_modify">Modify</button></li>
-                <li class=""><button class="btn_li_delete">Delete</button></li>
-            </ul>
-            <input type="submit" value="Soumettre" id="addButton">
-        </form>
-    </section>
-    <section id="donut">
-        <div class="container">
-            <h2 class="text-header">Donut Chart</h2>
-            <div class="donut-chart-block block"> 
-                <div class="donut-chart">
-                    <div id="part1" class="portion-block"><div class="circle"></div></div>
-                    <div id="part2" class="portion-block"><div class="circle"></div></div>
-                    <div id="part3" class="portion-block"><div class="circle"></div></div>
-                    <p class="center"></p>        
+    <div class="content">
+        <div class="sidebar">
+            <h1 class="text-header">PizzaForm 🍕</h1>
+            <div>
+                <div class="img">
+                    <div class="bgImg"></div>
+                    <p class="letter">T</p>
+                </div>
+                <div>
+                    <p><strong>Name:</strong> Boudra</p>
+                    <p><strong>Surname:</strong> Tristan</p>
                 </div>
             </div>
         </div>
-    </section>
-    <section>
-        <footer>
-            <p>Develop with ❤️ by Boudra Tristan</p>
-        </footer>
-    </section>
+        <div class="text-content">
+            <section id="form">
+                <form action="" class="form">
+                    <h2 class="text-header">Form</h2>
+                    <input type="text" name="name" id="name" placeholder="Name">
+                    <input type="text" name="flavor" id="flavor" placeholder="Flavor">
+                    <input type="text" name="price" id="price" placeholder="Price">
+                    <button type="submit" value="Add" id="btn_add" class="btn_add">Add</button>
+                </form>
+            </section>
+            <section id="list">
+                <div class="form_list">
+                    <h2 class="text-header">My list of pizza recipe 🍕</h2>
+                    <ul id="myList"></ul>
+                </div>
+            </section>
+            <section id="donut">
+                <div class="container">
+                    <h2 class="text-header">Donut Chart 🍩</h2>
+                    <div class="donut-chart-block block"> 
+                        <div class="donut-chart">
+                            <div id="part1" class="portion-block"><div class="circle"></div></div>
+                            <div id="part2" class="portion-block"><div class="circle"></div></div>
+                            <div id="part3" class="portion-block"><div class="circle"></div></div>
+                            <p class="center"></p>        
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <footer>
+                    <p>Develop with ❤️ by Boudra Tristan</p>
+                </footer>
+            </section>
+        </div>
+    </div>
     <script src="renderer.js"></script>
 </body>
 </html>
