@@ -44,7 +44,7 @@
 
 .form_list ul{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 10px;
     list-style: none;
 }

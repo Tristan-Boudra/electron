@@ -13,6 +13,7 @@ const addButton = document.querySelector('#btn_add');
 const modifyButton = document.querySelector('#btn_modify');
 const deleteButton = document.querySelector('#btn_delete');
 const list = document.querySelector('#myList');
+const sectionList = document.querySelector('#list');
 
 let selectedListItem = null;
 
@@ -22,7 +23,6 @@ const addItemToList = (name, surname, email) => {
 
     const modifyButton = document.createElement('button');
     modifyButton.textContent = 'Modify';
-    // modifyButton.addclassName = 'btn_modify';
     modifyButton.addEventListener('click', () => {
         modifyItem(listItem);
     });
@@ -37,6 +37,10 @@ const addItemToList = (name, surname, email) => {
     listItem.appendChild(deleteButton);
 
     list.appendChild(listItem);
+
+    if (list.children.length == 0) {
+        sectionList.style.display = 'none';
+    }
 };
 
 const modifyItem = (listItem) => {
