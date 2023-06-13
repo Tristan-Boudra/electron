@@ -8,6 +8,8 @@ const deleteButton = document.getElementById('#btn_delete');
 const list = document.querySelector('#myList');
 const sectionList = document.querySelector('#list');
 
+let selectedListItem = null;
+
 const addItemToList = (name, surname, email) => {
     const listItem = document.createElement('li');
     listItem.textContent = `Name: ${name}, Flavor: ${surname}, Price: ${email}`;
@@ -15,9 +17,9 @@ const addItemToList = (name, surname, email) => {
     const modifyButton = document.createElement('button');
     modifyButton.textContent = 'Modify';
     modifyButton.id = 'btn_modify';
-    // modifyButton.addEventListener('click', () => {
-    //     modifyItem(listItem);
-    // });
+    modifyButton.addEventListener('click', () => {
+        modifyItem(listItem);
+    });
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
