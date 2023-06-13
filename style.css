@@ -1,5 +1,8 @@
 *{
     font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .text-header{
@@ -158,6 +161,7 @@ p.center {
 }
 
 footer{
+    margin-top: 20px;
     text-align: center;
 }
 
